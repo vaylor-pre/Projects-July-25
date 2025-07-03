@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Destructuring(objects)</h2>
+
+<p id="output"></p>
+
+<script>
+
+// Creating an Object
+const student = {
+  firstName: "Chad",
+  lastName: "Kimani",
+  age: 20,
+  city: "Nairobi",
+
+};
+
+// Destructuring
+let {lastName, firstName,age,city,country="Kenya"} = student;
+//counry = "Kenya"; // Has been set as a default value
+
+//Destructuring 2
+//let {firstName : name } = student;
+//document.getElementById("output").innerHTML = name;
+
+
+document.getElementById("output").innerHTML = firstName + " " + lastName + " is " + age + " years old and lives in " + city+ ", " + country ;
+</script>
+
+</body>
+</html>

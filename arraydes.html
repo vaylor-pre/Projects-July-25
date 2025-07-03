@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Array Destructuring </h2>
+
+<p id="output"></p>
+
+<script>
+
+// Create an Array
+const students = ["Milkah", "John", "Ben", "Sarah"];
+const {[2]:stud1 ,[3]:stud2} = students;
+
+document.getElementById("output").innerHTML = stud1 + " " + stud2;
+
+</script>
+
+</body>
+</html>

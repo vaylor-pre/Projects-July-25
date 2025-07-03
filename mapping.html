@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Maps</h2>
+
+<p id="line"></p>
+
+<script>
+
+    //Creating a map
+const cars = new Map();
+
+cars.set("mercedes", 200);
+cars.set("bmw", 300);
+cars.set("audi", 100);
+
+//deleting a map element
+cars.delete("bmw");
+
+//cars.clear(); clears the entire map
+
+
+let numb = cars.get("audi");
+document.getElementById("line").innerHTML = "There are " + numb + " audi cars.";
+</script>
+
+</body>
+</html>

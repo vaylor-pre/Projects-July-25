@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Rest destructuring</h2>
+
+<p id="output"></p>
+
+<script>
+// Create an Array
+const numbers = [10, 20, 30, 40, 50, 60];
+
+// Destructuring
+const [a,b,c, ...rest] = numbers;
+
+
+document.getElementById("output").innerHTML =
+"a is " + a + "<br>" + "<br>" +
+"b is " + b + "<br>" + "<br>" +
+"c is " + c + "<br>" + "<br>" +
+"the rest is " + rest;
+</script>
+
+</body>
+</html>

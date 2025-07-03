@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Map Destructuring</h2>
+
+<p id="output"></p>
+
+<script>
+// Create a Map
+const cars = new Map([
+  ["Mercedes", 200],
+  ["Porsche", 300],
+  ["Audi", 100]
+]);
+
+// Destructuring
+let text = "";
+for (const [key, value] of cars) {
+  text += "<p>" + key + " is " + value + "</p>";
+}
+
+
+document.getElementById("output").innerHTML = text;
+</script>
+
+</body>
+</html>
