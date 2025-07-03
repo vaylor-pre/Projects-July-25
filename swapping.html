@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Swapping Variables</h2>
+
+<p id="output"></p>
+
+<script>
+let firstName = "Chad";
+let lastName = "Kimani";
+
+// Destructing the variables to swap their values
+[firstName, lastName] = [lastName, firstName];
+
+
+document.getElementById("output").innerHTML = firstName + " " + lastName;
+</script>
+
+</body>
+</html>
