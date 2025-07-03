@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Methods in classes</h2>
+
+<p id="output"></p>
+
+<script>
+
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+    // Method declared inside the class
+  age(x) {
+    return x - this.year;
+  }
+}
+
+const date = new Date();
+let year = date.getFullYear();
+// the year variable is set to the current year (x)
+const myCar = new Car("Toyota", 2017);
+
+document.getElementById("output").innerHTML=
+"My car is " + myCar.age(year) + " years old.";
+</script>
+
+</body>
+</html>

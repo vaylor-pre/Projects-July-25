@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Using modules in javascript</h2>
+  <p id="output"></p>
+
+    <script type="module">
+    import { name, age } from './person.js';
+
+    const text = `My name is ${name}, I am ${age}.`;
+    document.getElementById("output").innerHTML = text;
+  </script>
+</body>
+</html>

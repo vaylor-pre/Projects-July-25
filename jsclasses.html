@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating two car objects from a car class:</h2>
+
+<p id="output1"></p>
+
+<p id="output2"></p>
+
+<script>
+// Define a class with a constructor
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+//instantiate objects from the class
+
+const myCar1 = new Car("Mercedes", 2014);
+const myCar2 = new Car("Porsche", 2019);
+
+document.getElementById("output1").innerHTML =
+myCar1.name + " " + myCar2.name + "<br>" ;
+
+document.getElementById("output2").innerHTML =
+myCar1.year + " " + myCar2.year ;
+</script>
+
+</body>
+</html>

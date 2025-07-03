@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>this keyword to borrow methods</h1>
+
+<p id="output"></p>
+
+<script>
+const person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person2 = {
+  firstName:"Chad",
+  lastName: "Kimani",
+}
+
+let x = person1.fullName.call(person2);
+document.getElementById("output").innerHTML = x;
+</script>
+
+</body>
+</html>

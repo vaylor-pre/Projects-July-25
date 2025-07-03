@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Objects from JSON string</h2>
+
+<p id="output"></p>
+
+<script>
+    // JSON string
+let text = '{"students":[' +
+'{"firstName":"Chad","lastName":"Kimani"},' +
+'{"firstName":"Peter","lastName":"Musyoka"},' +
+'{"firstName":"Loise","lastName":"Chepgei"}' +
+']}';
+
+// Parse the JSON string into an object
+const obj = JSON.parse(text);
+
+document.getElementById("output").innerHTML =
+obj.students[2].firstName + " " + obj.students[2].lastName;
+</script>
+
+</body>
+</html>
