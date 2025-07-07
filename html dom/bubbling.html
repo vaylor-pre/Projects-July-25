@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDiv1, #myDiv2 {
+  background-color: rgba(121, 80, 255, 0.89);
+  padding: 50px;
+}
+
+#myP1, #myP2 {
+  background-color: rgba(255, 255, 255, 0.836);
+  font-size: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+
+<h2>Event listener bubbling and capturing</h2>
+
+<div id="myDiv1">
+  <h2>Bubbling:</h2>
+  <p id="myP1">Click </p>
+</div><br>
+
+<div id="myDiv2">
+  <h2>Capturing:</h2>
+  <p id="myP2">Click</p>
+</div>
+
+<script>
+document.getElementById("myP1").addEventListener("click", function() {
+  alert("You clicked the white element!");
+}, false);
+
+document.getElementById("myDiv1").addEventListener("click", function() {
+  alert("You clicked the purple element!");
+}, false);
+//set to false for bubbling : inner elements are clicked first
+document.getElementById("myP2").addEventListener("click", function() {
+  alert("You clicked the white element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+  alert("You clicked the purple element!");
+}, true);
+//set to true for capturing : outer elements are clicked first
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>event listener example</h2>
+<p>Click the button to display the current date and time.</p>
+
+
+<button id="Button">Click to display date</button>
+
+<p id="output"></p>
+
+<script>
+document.getElementById("Button").addEventListener("click",function () {
+  document.getElementById("output").innerHTML = Date();
+});
+</script>
+
+</body>
+</html>
