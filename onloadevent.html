@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()"  >
+
+<h1>Check if Cookies are Enabled
+</h1>
+
+<p id="output"></p>
+
+<script>
+function checkCookies() {
+  let text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("output").innerHTML = text;
+}
+// This checks if cookies are enabled in the browser
+//the onload event is triggered when the page is loaded
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <script>
+ function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+ }
+ // you can also use the required attribute in the input tag to make it mandatory
+ // <input type="text" name="fname" required>
+
+  </script>
+ </head>
+
+ <body>
+  <p>Form Validation </p>
+
+   <form name="myForm"  onsubmit="return validateForm()" method="post">
+      Name: <input type="text" name="fname" >
+      <input type="submit" value="Submit">
+   </form>
+
+ </body>
+</html>
