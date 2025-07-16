@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
    };
      xhr.send();
+
         const newTodoInput = document.getElementById('new-todo');
        function addTodo() {
         const task = newTodoInput.value.trim();
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             newTodoInput.value = '';
         }
        }
-      // Add new todo
+      // Add new todo listeners
          const addBtn = document.getElementById('add-btn');
          addBtn.addEventListener('click', addTodo);
         newTodoInput.addEventListener('keypress', function(e) {
