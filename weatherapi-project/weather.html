@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Weather Updates</title>
+    <link rel="stylesheet" href="stylew.css">
+</head>
+<body>
+    <h1>Today's Weather Updates</h1>
+
+    <div class="search-container">
+        <input type="text" id="locationInput" placeholder="Enter city name">
+        <button onclick="fetchWeather()">Get Weather</button>
+    </div>
+
+    <div id="weatherDisplay">
+        <div class="loading">Loading weather data...</div>
+    </div>
+
+    <script src="scriptw.js"></script>
+</body>
+</html>
