@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let todos = [];
     // Fetch todos from JSON file
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'todos.json', true);
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
     xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var data = JSON.parse(xhr.responseText);
@@ -30,6 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
             showTodos();
             updatePendingCount();
             newTodoInput.value = '';
+            newTodoInput.focus();
+
+            // send the new todo to the server
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://jsonplaceholder.typicode.com/todos', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 201) {
+                    console.log('Todo added successfully');
+                }
+            };
+            xhr.send(JSON.stringify(newTodo));
         }
        }
       // Add new todo listeners
