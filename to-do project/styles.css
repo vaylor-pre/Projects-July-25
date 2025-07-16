@@ -11,7 +11,7 @@ body {
     color: #e0e0e0;
 }
 
-.todo-container {
+.todo-header {
     background-color: #1e1e1e;
     width: 100%;
     max-width: 500px;
@@ -89,7 +89,7 @@ h1 {
     font-weight: bold;
 }
 
-.todo-footer {
+.todo-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
