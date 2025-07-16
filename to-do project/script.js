@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-   const newTodoInput = document.getElementById('new-todo');
+
     let todos = [];
     // Fetch todos from JSON file
     var xhr = new XMLHttpRequest();
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
    };
      xhr.send();
-
+        const newTodoInput = document.getElementById('new-todo');
        function addTodo() {
         const task = newTodoInput.value.trim();
         if (task) {
