@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
    };
      xhr.send();
-
+       // Add new todo functionality
         const newTodoInput = document.getElementById('new-todo');
        function addTodo() {
         const task = newTodoInput.value.trim();
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pendingTodos = todos.filter(function(todo) {
         return !todo.completed;
        });
+       // Display pending todos
       pendingTodos.forEach(function(todo) {
        const todoItem = document.createElement('div');
         todoItem.className = 'todo-item';
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
        showTodos();
        updatePendingCount();
       }
-       // Clear all pending todos
+       // Clear all listener
     const clearAllBtn = document.getElementById('clear-all');
     clearAllBtn.addEventListener('click', clearAllPending);
  });
